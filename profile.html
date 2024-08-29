@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Cafe</title>
+    
+    <!-- font awesome cdn -->
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
+
+    <!-- google font cdn -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lexend Giga' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inspiration' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Joti One' rel='stylesheet'>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+    <!------------------------------------ start of navbar ----------------------->
+    <header>
+
+        <nav>
+            <div class="content1" id="main-logo"><img src="images/sunset-cafe-high-resolution-logo-transparent.png" alt=""></div>
+            <!-- <div id="content2" ><img src="images/MENU IMAGES/burger-new.jpg" alt=""></div> -->
+            
+            <div class="nav-list">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li>
+                    
+                </li>
+                <li class="my-cart-btn">
+                   
+                </li>
+            </ul>
+        </div>
+
+        <div class="right-col">
+            <div class="sign-in">
+                <!-- <a href="" style="border-right: 2px solid white; padding-right: 5px;">Sign in</a>
+                <a href="">Login</a> -->
+            </div>
+
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div id="cart-text" >My-Cart</div>
+            </div>
+        </div>  <!--right col end-->
+
+    </nav>
+
+
+    </header>
+    <!--------------------------------------------- end of nav bar ---------------------------->
+
+    <!------------------------------------- start main section --------------------------->
+    <div class="container" style="font-family: 'Inter';">
+
+        <div class="sidebar">
+          <ul class="nav-links">
+            <li class="sidelink"><a href="#" data-target="content1">My Account</a></li>
+            <li class="sidelink"><a href="#" data-target="content2">Account Information</a></li>
+            <li class="sidelink"><a href="#" data-target="content3">Your Order</a></li>
+          </ul>
+        </div>
+
+        <div class="content-container">
+
+          <div class="content active" id="content1">
+
+            <form action="">
+                <div class="main-heading">MY ACCOUNT</div>
+                    <div class="form-grp">
+                        <div class="contend">
+                            <div class="head">ACCOUNT INFORMATION</div>
+
+                            <div class="sub-content">
+                                <div class="head-2">CONTACT INFORMATION</div>
+                                <div class="head-3">
+                                    <p class="text-1">abhilash subhash</p>
+                                    <p class="text-2">abhilashsubhash12345@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="head">
+                                <p id="head-1">ADDRESS BOOK</p>
+                            <p id="head-2">Manage Addresses</p>
+                            </div>
+
+                            <div class="sub-content">
+                                <div class="head-2">DEFAULT BILLING ADDRESS</div>
+                                <div class="head-3">
+                                    <p class="text1">You have not set a default billing address.</p>
+                                    <a href=""><p class="text2">Edit Address</p></a>
+                                </div>
+                            </div>
+
+                            <div class="sub-content">
+                                <div class="head-2">DEFAULT SHIPPING ADDRESS</div>
+                                <div class="head-3">
+                                    <p class="text1">You have not set a default shipping address.</p>
+                                    <a href=""><p class="text2">Edit Address</p></a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+            </form>
+
+          </div>
+
+          <div class="content" id="content2">
+            <form action="">
+                <div class="form-grp">
+                    <div class="main-head">EDIT ACCOUNT INFORMATION</div>
+
+                    <div class="head">
+                        ACCOUNT INFORMATION
+                    </div>
+
+                    <div class="input-grp">
+                        <label for="First Name">First Name *</label><br>
+                        <input type="text" placeholder="ABC"><br>
+
+                        <label for="First Name">Last Name *</label><br>
+                        <input type="text" placeholder="ABC"><br>
+
+                        <label for="First Name">Phone Number *</label><br>
+                        <input type="text" placeholder="ABC"><br>
+
+                        <div class="head">ADDRESS</div><br>
+
+                        <label for="First Name">Street Address *</label><br>
+                        <input type="text" placeholder="ABC"><br>
+
+                        <label for="First Name">City *</label><br>
+                        <input type="text" placeholder="ABC"><br>
+
+                        <label for="First Name">State *</label><br>
+                        <input type="text" placeholder="ABC"><br>
+
+                        <label for="First Name">Zip Code *</label><br>
+                        <input type="text" placeholder="ABC"><br>
+
+                    </div>
+                </div>
+            </form>
+          </div>
+
+          <div class="content" id="content3">
+
+            <div class="head">Your Order</div>
+
+            <div class="des">
+                <img class="cloud" src="images/MENU IMAGES/cloud.png" alt="" srcset="">
+                <div class="sub-head">
+                    seems like you have yet to place an order
+                </div>
+            </div>
+
+            <div class="head">Order History</div>
+
+                <div class="list-container">
+                    <ul class="list">
+                        <li>
+                           <img class="slide-img" src="images/MENU IMAGES/sandwich.jpg" alt="" >
+                           <div class="history-des">
+                                <div class="row1">Bombay Masala Sandwich</div>
+                                <div class="row1">Data: 02-01-24 12:14pm</div>
+                                <div class="row1">Payment: UPI</div>
+                           </div> 
+                        </li>
+                        <li>
+                           <img class="slide-img" src="images/MENU IMAGES/burger.jpg" alt="" >
+                           <div class="history-des">
+                                <div class="row1">Burger</div>
+                                <div class="row1">Data: 01-01-24 1:40pm</div>
+                                <div class="row1">Payment: UPI</div>
+                           </div> 
+                        </li>
+                        <li>
+                           <img class="slide-img" src="images/MENU IMAGES/sandwich 2.jpg" alt="" >
+                           <div class="history-des">
+                                <div class="row1">Corn Sandwich</div>
+                                <div class="row1">Data:20-12-23 1:04pm</div>
+                                <div class="row1">Payment: UPI</div>
+                           </div> 
+                        </li>
+                        <li>
+                           <img class="slide-img" src="images/MENU IMAGES/sandvich.jfif" alt="" >
+                           <div class="history-des">
+                                <div class="row1">Cg Masala Sandwich</div>
+                                <div class="row1">Data: 02-01-24 12:14pm</div>
+                                <div class="row1">Payment: UPI</div>
+                           </div> 
+                        </li>
+                    </ul>
+                </div>
+            
+            <hr>
+                
+            <div id="last-content">
+                <div class="sub-head">Let us reach you</div>
+                <div id="grp">
+                    <input id="mail" placeholder="your E mail ID">
+                    <button id="reach-btn" type="button">SUBMIT</button>
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      
+
+    <!-- close main section -->
+
+    <footer style="background: #CDC4C4">
+        <div class="footer-link">
+            <div class="address">
+                <ul>
+                    <h2>Address</h2>
+                    <li>Cafe</li>
+                    <li>Plot no 45, street no 14</li>
+                    <li>Marol MIDC Industry </li>
+                    <li>Estate </li>
+                    <li>Andheri</li>
+                    <li>East, Mumbai-400093</li>
+                </ul>
+            </div>
+
+            <div class="help">
+                <ul>
+                    <h2>Help & info</h2>
+                    <li>About Cafe</li>
+                    <li>Careers</li>
+                    <li>FAQs</li>
+                </ul>
+            </div>
+            
+            <div class="contact">
+                <ul>
+                    <h2>Contact Us</h2>
+                    <li>1809-908-5647</li>
+                    <li>Get in Touch</li>
+                    <li>Cget with Us</li>
+                </ul>
+            </div>
+
+            <div class="useful-links">
+                <ul>
+                    <h2>Useful Links</h2>
+                    <li>Privacy Policy </li>
+                    <li>Terms of service</li>
+                    <li>Payment of Issues </li>
+                    <li>Net Banking </li>
+                    <li>Andheri</li>
+                    <li>Custom Order</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="social-icons">
+            <div>Follow Us on : </div>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="text" style="background: #251A17; color: white;">
+                @2023 Railworld India. All Rights Reserved
+            </div>
+        </div>
+
+    </footer>
+
+    </body>
+    <script src="js/profile.js"></script>
+</html>
+
+
+
+
+
+

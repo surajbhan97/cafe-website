@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.slides {
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* background: rgb(141, 177, 87); */
+  color: black;
+}
+
+.wrapper {
+  padding: 35px;
+  position: relative;
+  overflow-x: hidden;
+  top: -500px;
+  color: white;
+}
+
+.wrapper .icon {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.icon:first-child {
+  left: 0;
+  display: none;
+  background: linear-gradient(90deg, 70%, transparent);
+}
+
+.icon:last-child {
+  right: -15px;
+  justify-content: flex-end;
+}
+
+.icon i {
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+}
+
+.icon i:hover {
+  background: blueviolet;
+}
+
+.icon:first-child i {
+  margin-left: 15px;
+} 
+
+.icon:last-child i {
+  margin-right: 15px;
+} 
+
+.wrapper .tabs-box {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.tabs-box.dragging {
+  scroll-behavior: auto;
+  cursor: grab;
+}
+
+.tabs-box .tab {
+  cursor: pointer;
+  font-size: 1.18rem;
+  white-space: nowrap;
+  padding: 13px 20px;
+  font-size: 24px;
+  font-family: josefin sans;
+}
+
+.tabs-box a{
+  color: white;
+  text-decoration: none;
+}
+
+.tabs-box .tab:hover{
+  background: #5c580c;
+}
+
+.tabs-box.dragging .tab {
+  user-select: none;
+  pointer-events: none;
+}
+</style>
+
+</head>
+<body>
+    
+    <div class="slides">>
+        <div class="wrapper">
+            <div class="icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
+            <ul class="tabs-box">
+                <a href="../html/sand.html"> <li class="tab">BURGER & SANDWICHES</li></a>
+                <a href="../html/m2.html"><li class="tab">CHINESE CUSINE</li></a>
+                <a href="../html/m3.html"><li class="tab">STARTER</li></a>
+                <a href="../html/m4.html"><li class="tab">SIDES</li></a>
+                <a href="../html/m5.html"><li class="tab">SALADS</li></a>
+                <a href="../html/m6.html"><li class="tab">DESSERT/ICE-CREAM</li></a>
+                <a href="../html/m7.html"><li class="tab">MAIN COURSE</li></a>
+                <a href="../html/m8.html"><li class="tab">VALUE COMBO</li></a>
+                <a href="#"><li class="tab">BEVERAGES</li></a>
+            </ul>
+            <div class="icon"><i id="right" class="fa-solid fa-angle-right"></i></div>
+          </div>
+    </div>
+</body>
+<script type="text/javascript">
+    const tabsBox = document.querySelector(".tabs-box"),
+allTabs = tabsBox.querySelectorAll(".tab"),
+arrowIcons = document.querySelectorAll(".icon i");
+let isDragging = false;
+const handleIcons = (scrollVal) => {
+    let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
+    arrowIcons[0].parentElement.style.display = scrollVal <= 0 ? "none" : "flex";
+    arrowIcons[1].parentElement.style.display = maxScrollableWidth - scrollVal <= 1 ? "none" : "flex";
+}
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        // if clicked icon is left, reduce 350 from tabsBox scrollLeft else add
+        let scrollWidth = tabsBox.scrollLeft += icon.id === "left" ? -340 : 340;
+        handleIcons(scrollWidth);
+    });
+});
+allTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        tabsBox.querySelector(".active").classList.remove("active");
+        tab.classList.add("active");
+    });
+});
+const dragging = (e) => {
+    if(!isDragging) return;
+    tabsBox.classList.add("dragging");
+    tabsBox.scrollLeft -= e.movementX;
+    handleIcons(tabsBox.scrollLeft)
+}
+const dragStop = () => {
+    isDragging = false;
+    tabsBox.classList.remove("dragging");
+}
+tabsBox.addEventListener("mousedown", () => isDragging = true);
+tabsBox.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+</script>
+</html>
